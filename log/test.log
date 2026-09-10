@@ -1,0 +1,341 @@
+I, [2026-09-10T21:37:03.927426 #641]  INFO -- : Starting worker f01ce0c894c0:641:high,low
+E, [2026-09-10T21:37:03.933507 #641] ERROR -- : (Job{jobs} |  | nil) failed: #<NoMethodError: undefined method 'perform' for class Object>
+E, [2026-09-10T21:37:03.933531 #641] ERROR -- : Received exception when reporting failure: #<Exception: Failure backend error>
+D, [2026-09-10T21:37:03.935156 #641] DEBUG -- : Registered signals
+D, [2026-09-10T21:37:03.938353 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:03.938416 #641] DEBUG -- : Found job on jobs
+D, [2026-09-10T21:37:03.938499 #641] DEBUG -- : resque-3.0.3: Processing jobs since 1789076223 [SomeJob]
+I, [2026-09-10T21:37:03.938509 #641]  INFO -- : got: (Job{jobs} | SomeJob | [20, "/tmp"])
+D, [2026-09-10T21:37:03.938945 #641] DEBUG -- : resque-3.0.3: Forked 684 at 1789076223
+D, [2026-09-10T21:37:03.941850 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:03.942217 #641] DEBUG -- : Found job on jobs
+D, [2026-09-10T21:37:03.942266 #641] DEBUG -- : resque-3.0.3: Processing jobs since 1789076223 [SuicidalJob]
+I, [2026-09-10T21:37:03.942270 #641]  INFO -- : got: (Job{jobs} | SuicidalJob | [])
+D, [2026-09-10T21:37:03.942624 #641] DEBUG -- : resque-3.0.3: Forked 691 at 1789076223
+D, [2026-09-10T21:37:03.945175 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:03.947221 #641] DEBUG -- : Registered signals
+D, [2026-09-10T21:37:03.949528 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:03.949561 #641] DEBUG -- : Found job on jobs
+D, [2026-09-10T21:37:03.949613 #641] DEBUG -- : resque-3.0.3: Processing jobs since 1789076223 [SomeJob]
+I, [2026-09-10T21:37:03.949620 #641]  INFO -- : got: (Job{jobs} | SomeJob | [20, "/tmp"])
+I, [2026-09-10T21:37:03.949715 #641]  INFO -- : done: (Job{jobs} | SomeJob | [20, "/tmp"])
+E, [2026-09-10T21:37:03.949787 #641] ERROR -- : Failed to start worker : #<TypeError: Unsupported command argument type: Resque::Worker>
+E, [2026-09-10T21:37:03.949817 #641] ERROR -- : /usr/local/bundle/gems/redis-client-0.30.1/lib/redis_client/command_builder.rb:37:in 'block in RedisClient::CommandBuilder#generate'
+/usr/local/bundle/gems/redis-client-0.30.1/lib/redis_client/command_builder.rb:28:in 'Array#map!'
+/usr/local/bundle/gems/redis-client-0.30.1/lib/redis_client/command_builder.rb:28:in 'RedisClient::CommandBuilder#generate'
+/usr/local/bundle/gems/redis-client-0.30.1/lib/redis_client.rb:377:in 'RedisClient#call_v'
+/usr/local/bundle/gems/redis-5.4.1/lib/redis/client.rb:97:in 'Redis::Client#call_v'
+/usr/local/bundle/gems/redis-5.4.1/lib/redis.rb:154:in 'block in Redis#send_command'
+/usr/local/bundle/gems/redis-5.4.1/lib/redis.rb:153:in 'Monitor#synchronize'
+/usr/local/bundle/gems/redis-5.4.1/lib/redis.rb:153:in 'Redis#send_command'
+/usr/local/bundle/gems/redis-5.4.1/lib/redis/commands/sets.rb:96:in 'Redis::Commands::Sets#sismember'
+/usr/local/bundle/gems/redis-namespace-1.11.0/lib/redis/namespace.rb:564:in 'Redis::Namespace#wrapped_send'
+/usr/local/bundle/gems/redis-namespace-1.11.0/lib/redis/namespace.rb:521:in 'Redis::Namespace#call_with_namespace'
+/usr/local/bundle/gems/redis-namespace-1.11.0/lib/redis/namespace.rb:395:in 'block (2 levels) in <class:Namespace>'
+/workspaces/resque/lib/resque/data_store.rb:238:in 'Resque::DataStore::Workers#worker_exists?'
+/usr/local/lib/ruby/3.4.0/forwardable.rb:240:in 'Resque::DataStore#worker_exists?'
+/workspaces/resque/lib/resque/worker.rb:126:in 'Resque::Worker.exists?'
+/workspaces/resque/test/worker_test.rb:670:in 'block (4 levels) in <top (required)>'
+/workspaces/resque/test/test_helper.rb:108:in 'block (2 levels) in AssertInWorkBlock#work'
+/workspaces/resque/lib/resque/worker.rb:353:in 'Resque::Worker#perform'
+/workspaces/resque/lib/resque/worker.rb:305:in 'Resque::Worker#work_one_job'
+/workspaces/resque/lib/resque/worker.rb:267:in 'block in Resque::Worker#work'
+<internal:kernel>:168:in 'Kernel#loop'
+/workspaces/resque/lib/resque/worker.rb:264:in 'Resque::Worker#work'
+/workspaces/resque/test/test_helper.rb:105:in 'block in AssertInWorkBlock#work'
+/workspaces/resque/test/test_helper.rb:103:in 'Kernel#catch'
+/workspaces/resque/test/test_helper.rb:103:in 'AssertInWorkBlock#work'
+/workspaces/resque/test/worker_test.rb:669:in 'block (3 levels) in <top (required)>'
+/workspaces/resque/test/test_helper.rb:269:in 'Object#without_forking'
+/workspaces/resque/test/worker_test.rb:668:in 'block (2 levels) in <top (required)>'
+/usr/local/bundle/gems/minitest-5.27.0/lib/minitest/test.rb:95:in 'block (2 levels) in Minitest::Test#run'
+/usr/local/bundle/gems/minitest-5.27.0/lib/minitest/test.rb:191:in 'Minitest::Test#capture_exceptions'
+/usr/local/bundle/gems/minitest-5.27.0/lib/minitest/test.rb:90:in 'block in Minitest::Test#run'
+/usr/local/bundle/gems/minitest-5.27.0/lib/minitest.rb:382:in 'Minitest::Runnable#time_it'
+/usr/local/bundle/gems/minitest-5.27.0/lib/minitest/test.rb:89:in 'Minitest::Test#run'
+/usr/local/bundle/gems/minitest-5.27.0/lib/minitest.rb:1223:in 'Minitest.run_one_method'
+/usr/local/bundle/gems/minitest-5.27.0/lib/minitest.rb:462:in 'Minitest::Runnable.run_one_method'
+/usr/local/bundle/gems/minitest-5.27.0/lib/minitest.rb:449:in 'block (2 levels) in Minitest::Runnable.run'
+/usr/local/bundle/gems/minitest-5.27.0/lib/minitest.rb:445:in 'Array#each'
+/usr/local/bundle/gems/minitest-5.27.0/lib/minitest.rb:445:in 'block in Minitest::Runnable.run'
+/usr/local/bundle/gems/minitest-5.27.0/lib/minitest.rb:487:in 'Minitest::Runnable.on_signal'
+/usr/local/bundle/gems/minitest-5.27.0/lib/minitest.rb:474:in 'Minitest::Runnable.with_info_handler'
+/usr/local/bundle/gems/minitest-5.27.0/lib/minitest.rb:444:in 'Minitest::Runnable.run'
+/usr/local/bundle/gems/minitest-5.27.0/lib/minitest.rb:346:in 'block in Minitest.__run'
+/usr/local/bundle/gems/minitest-5.27.0/lib/minitest.rb:346:in 'Array#map'
+/usr/local/bundle/gems/minitest-5.27.0/lib/minitest.rb:346:in 'Minitest.__run'
+/usr/local/bundle/gems/minitest-5.27.0/lib/minitest.rb:301:in 'Minitest.run'
+/usr/local/bundle/gems/minitest-5.27.0/lib/minitest.rb:85:in 'block in Minitest.autorun'
+D, [2026-09-10T21:37:03.951392 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:03.951416 #641] DEBUG -- : Found job on jobs
+I, [2026-09-10T21:37:03.952023 #641]  INFO -- : done: (Job{jobs} | SomeJob | [20, "/tmp"])
+D, [2026-09-10T21:37:03.952427 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:03.952450 #641] DEBUG -- : Found job on jobs
+E, [2026-09-10T21:37:03.953271 #641] ERROR -- : (Job{jobs} | BadJob | []) failed: #<RuntimeError: Bad job!>
+D, [2026-09-10T21:37:03.953482 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:03.953503 #641] DEBUG -- : Found job on jobs
+E, [2026-09-10T21:37:03.954096 #641] ERROR -- : (Job{jobs} | BadJob | []) failed: #<RuntimeError: Bad job!>
+D, [2026-09-10T21:37:03.955199 #641] DEBUG -- : Registered signals
+D, [2026-09-10T21:37:03.958403 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:03.958443 #641] DEBUG -- : Found job on jobs
+D, [2026-09-10T21:37:03.958494 #641] DEBUG -- : resque-3.0.3: Processing jobs since 1789076223 [SomeJob]
+I, [2026-09-10T21:37:03.958501 #641]  INFO -- : got: (Job{jobs} | SomeJob | [20, "/tmp"])
+I, [2026-09-10T21:37:03.958546 #641]  INFO -- : done: (Job{jobs} | SomeJob | [20, "/tmp"])
+D, [2026-09-10T21:37:03.958607 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:03.959967 #641] DEBUG -- : Registered signals
+D, [2026-09-10T21:37:03.962755 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:03.962793 #641] DEBUG -- : Found job on jobs
+D, [2026-09-10T21:37:03.962837 #641] DEBUG -- : resque-3.0.3: Processing jobs since 1789076223 [SomeJob]
+I, [2026-09-10T21:37:03.962845 #641]  INFO -- : got: (Job{jobs} | SomeJob | [20, "/tmp"])
+D, [2026-09-10T21:37:03.963267 #641] DEBUG -- : resque-3.0.3: Forked 725 at 1789076223
+D, [2026-09-10T21:37:03.965847 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:03.969541 #641] DEBUG -- : Registered signals
+D, [2026-09-10T21:37:03.972243 #641] DEBUG -- : Checking charlie
+D, [2026-09-10T21:37:03.972284 #641] DEBUG -- : Found job on charlie
+D, [2026-09-10T21:37:03.972330 #641] DEBUG -- : resque-3.0.3: Processing charlie since 1789076223 [GoodJob]
+I, [2026-09-10T21:37:03.972337 #641]  INFO -- : got: (Job{charlie} | GoodJob | [])
+E, [2026-09-10T21:37:03.972700 #641] ERROR -- : (Job{charlie} | GoodJob | []) failed: #<ArgumentError: wrong number of arguments (given 0, expected 1)>
+D, [2026-09-10T21:37:03.972867 #641] DEBUG -- : Checking charlie
+D, [2026-09-10T21:37:03.972881 #641] DEBUG -- : Checking bravo
+D, [2026-09-10T21:37:03.972900 #641] DEBUG -- : Found job on bravo
+D, [2026-09-10T21:37:03.972932 #641] DEBUG -- : resque-3.0.3: Processing bravo since 1789076223 [GoodJob]
+I, [2026-09-10T21:37:03.972945 #641]  INFO -- : got: (Job{bravo} | GoodJob | [])
+E, [2026-09-10T21:37:03.973304 #641] ERROR -- : (Job{bravo} | GoodJob | []) failed: #<ArgumentError: wrong number of arguments (given 0, expected 1)>
+D, [2026-09-10T21:37:03.973429 #641] DEBUG -- : Checking charlie
+D, [2026-09-10T21:37:03.973444 #641] DEBUG -- : Checking bravo
+D, [2026-09-10T21:37:03.973456 #641] DEBUG -- : Checking alpha
+D, [2026-09-10T21:37:03.973472 #641] DEBUG -- : Found job on alpha
+D, [2026-09-10T21:37:03.973505 #641] DEBUG -- : resque-3.0.3: Processing alpha since 1789076223 [GoodJob]
+I, [2026-09-10T21:37:03.973507 #641]  INFO -- : got: (Job{alpha} | GoodJob | [])
+E, [2026-09-10T21:37:03.974133 #641] ERROR -- : (Job{alpha} | GoodJob | []) failed: #<ArgumentError: wrong number of arguments (given 0, expected 1)>
+D, [2026-09-10T21:37:03.974256 #641] DEBUG -- : Checking charlie
+D, [2026-09-10T21:37:03.974270 #641] DEBUG -- : Checking bravo
+D, [2026-09-10T21:37:03.974451 #641] DEBUG -- : Checking alpha
+D, [2026-09-10T21:37:03.974465 #641] DEBUG -- : Checking delta
+D, [2026-09-10T21:37:03.974482 #641] DEBUG -- : Found job on delta
+D, [2026-09-10T21:37:03.974515 #641] DEBUG -- : resque-3.0.3: Processing delta since 1789076223 [GoodJob]
+I, [2026-09-10T21:37:03.974518 #641]  INFO -- : got: (Job{delta} | GoodJob | [])
+E, [2026-09-10T21:37:03.974771 #641] ERROR -- : (Job{delta} | GoodJob | []) failed: #<ArgumentError: wrong number of arguments (given 0, expected 1)>
+D, [2026-09-10T21:37:03.975290 #641] DEBUG -- : Checking charlie
+D, [2026-09-10T21:37:03.975304 #641] DEBUG -- : Checking bravo
+D, [2026-09-10T21:37:03.975317 #641] DEBUG -- : Checking alpha
+D, [2026-09-10T21:37:03.975329 #641] DEBUG -- : Checking delta
+D, [2026-09-10T21:37:03.975341 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:03.975359 #641] DEBUG -- : Found job on jobs
+D, [2026-09-10T21:37:03.975392 #641] DEBUG -- : resque-3.0.3: Processing jobs since 1789076223 [SomeJob]
+I, [2026-09-10T21:37:03.975398 #641]  INFO -- : got: (Job{jobs} | SomeJob | [20, "/tmp"])
+I, [2026-09-10T21:37:03.975432 #641]  INFO -- : done: (Job{jobs} | SomeJob | [20, "/tmp"])
+D, [2026-09-10T21:37:03.975751 #641] DEBUG -- : Checking charlie
+D, [2026-09-10T21:37:03.975765 #641] DEBUG -- : Checking bravo
+D, [2026-09-10T21:37:03.975778 #641] DEBUG -- : Checking alpha
+D, [2026-09-10T21:37:03.975790 #641] DEBUG -- : Checking delta
+D, [2026-09-10T21:37:03.975801 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:03.995030 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:03.995066 #641] DEBUG -- : Found job on jobs
+I, [2026-09-10T21:37:03.995802 #641]  INFO -- : done: (Job{jobs} | SomeJob | [20, "/tmp"])
+D, [2026-09-10T21:37:03.995917 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:03.995951 #641] DEBUG -- : Found job on jobs
+E, [2026-09-10T21:37:03.996505 #641] ERROR -- : (Job{jobs} | BadJob | []) failed: #<RuntimeError: Bad job!>
+D, [2026-09-10T21:37:03.996695 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:03.996721 #641] DEBUG -- : Found job on jobs
+E, [2026-09-10T21:37:03.997232 #641] ERROR -- : (Job{jobs} | BadJob | []) failed: #<RuntimeError: Bad job!>
+D, [2026-09-10T21:37:03.998261 #641] DEBUG -- : Registered signals
+D, [2026-09-10T21:37:04.000848 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.000880 #641] DEBUG -- : Found job on jobs
+D, [2026-09-10T21:37:04.000922 #641] DEBUG -- : resque-3.0.3: Processing jobs since 1789076224 [SomeJob]
+I, [2026-09-10T21:37:04.001031 #641]  INFO -- : got: (Job{jobs} | SomeJob | [20, "/tmp"])
+I, [2026-09-10T21:37:04.001078 #641]  INFO -- : done: (Job{jobs} | SomeJob | [20, "/tmp"])
+D, [2026-09-10T21:37:04.001135 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.001155 #641] DEBUG -- : Found job on jobs
+D, [2026-09-10T21:37:04.002327 #641] DEBUG -- : resque-3.0.3: Processing jobs since 1789076224 [SomeJob]
+I, [2026-09-10T21:37:04.002332 #641]  INFO -- : got: (Job{jobs} | SomeJob | [20, "/tmp"])
+I, [2026-09-10T21:37:04.002372 #641]  INFO -- : done: (Job{jobs} | SomeJob | [20, "/tmp"])
+D, [2026-09-10T21:37:04.002422 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.003460 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.003483 #641] DEBUG -- : Found job on jobs
+D, [2026-09-10T21:37:04.003522 #641] DEBUG -- : resque-3.0.3: Processing jobs since 1789076224 [SomeJob]
+I, [2026-09-10T21:37:04.003526 #641]  INFO -- : got: (Job{jobs} | SomeJob | [20, "/tmp"])
+D, [2026-09-10T21:37:04.004009 #641] DEBUG -- : resque-3.0.3: Forked 774 at 1789076224
+D, [2026-09-10T21:37:04.005596 #641] DEBUG -- : resque-3.0.3: Processing jobs since 1789076224 [GoodJob]
+I, [2026-09-10T21:37:04.005602 #641]  INFO -- : got: (Job{jobs} | GoodJob | nil)
+D, [2026-09-10T21:37:04.005943 #641] DEBUG -- : resque-3.0.3: Forked 781 at 1789076224
+D, [2026-09-10T21:37:04.008083 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.008119 #641] DEBUG -- : Found job on jobs
+D, [2026-09-10T21:37:04.008165 #641] DEBUG -- : resque-3.0.3: Processing jobs since 1789076224 [GoodJob]
+I, [2026-09-10T21:37:04.008179 #641]  INFO -- : got: (Job{jobs} | GoodJob | [])
+D, [2026-09-10T21:37:04.008531 #641] DEBUG -- : resque-3.0.3: Forked 788 at 1789076224
+D, [2026-09-10T21:37:04.010396 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.011434 #641] DEBUG -- : Registered signals
+D, [2026-09-10T21:37:04.013973 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.014010 #641] DEBUG -- : Found job on jobs
+D, [2026-09-10T21:37:04.014060 #641] DEBUG -- : resque-3.0.3: Processing jobs since 1789076224 [SomeJob]
+I, [2026-09-10T21:37:04.014070 #641]  INFO -- : got: (Job{jobs} | SomeJob | [20, "/tmp"])
+I, [2026-09-10T21:37:04.014115 #641]  INFO -- : done: (Job{jobs} | SomeJob | [20, "/tmp"])
+D, [2026-09-10T21:37:04.014201 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.015930 #641] DEBUG -- : Registered signals
+D, [2026-09-10T21:37:04.018088 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.018117 #641] DEBUG -- : Found job on jobs
+D, [2026-09-10T21:37:04.018156 #641] DEBUG -- : resque-3.0.3: Processing jobs since 1789076224 [SomeJob]
+I, [2026-09-10T21:37:04.018162 #641]  INFO -- : got: (Job{jobs} | SomeJob | [20, "/tmp"])
+D, [2026-09-10T21:37:04.018526 #641] DEBUG -- : resque-3.0.3: Forked 805 at 1789076224
+D, [2026-09-10T21:37:04.020157 #641] DEBUG -- : Checking jobs
+I, [2026-09-10T21:37:04.023572 #641]  INFO -- : Pruning dead worker: bar:3:jobs
+E, [2026-09-10T21:37:04.025854 #641] ERROR -- : (Job{jobs} | SimpleFailingJob | "") failed: #<ArgumentError: wrong number of arguments (given 1, expected 0)>
+I, [2026-09-10T21:37:04.029407 #641]  INFO -- : Pruning dead worker: bar:3:jobs
+D, [2026-09-10T21:37:04.030448 #641] DEBUG -- : Checking critical
+D, [2026-09-10T21:37:04.030478 #641] DEBUG -- : Found job on critical
+E, [2026-09-10T21:37:04.031159 #641] ERROR -- : (Job{critical} | GoodJob | []) failed: #<ArgumentError: wrong number of arguments (given 0, expected 1)>
+D, [2026-09-10T21:37:04.031316 #641] DEBUG -- : Checking critical
+D, [2026-09-10T21:37:04.031331 #641] DEBUG -- : Checking high
+D, [2026-09-10T21:37:04.031352 #641] DEBUG -- : Found job on high
+E, [2026-09-10T21:37:04.031910 #641] ERROR -- : (Job{high} | GoodJob | []) failed: #<ArgumentError: wrong number of arguments (given 0, expected 1)>
+D, [2026-09-10T21:37:04.032733 #641] DEBUG -- : Registered signals
+D, [2026-09-10T21:37:04.035380 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.035412 #641] DEBUG -- : Found job on jobs
+D, [2026-09-10T21:37:04.035458 #641] DEBUG -- : resque-3.0.3: Processing jobs since 1789076224 [SomeJob]
+I, [2026-09-10T21:37:04.035464 #641]  INFO -- : got: (Job{jobs} | SomeJob | [20, "/tmp"])
+I, [2026-09-10T21:37:04.035517 #641]  INFO -- : done: (Job{jobs} | SomeJob | [20, "/tmp"])
+D, [2026-09-10T21:37:04.035661 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.040408 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.040438 #641] DEBUG -- : Found job on jobs
+I, [2026-09-10T21:37:04.041068 #641]  INFO -- : done: (Job{jobs} | SomeJob | [20, "/tmp"])
+D, [2026-09-10T21:37:04.041125 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.041151 #641] DEBUG -- : Found job on jobs
+E, [2026-09-10T21:37:04.041667 #641] ERROR -- : (Job{jobs} | BadJob | []) failed: #<RuntimeError: Bad job!>
+D, [2026-09-10T21:37:04.041779 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.041801 #641] DEBUG -- : Found job on jobs
+E, [2026-09-10T21:37:04.042730 #641] ERROR -- : (Job{jobs} | BadJob | []) failed: #<RuntimeError: Bad job!>
+D, [2026-09-10T21:37:05.206757 #875] DEBUG -- : Registered signals
+D, [2026-09-10T21:37:05.212387 #875] DEBUG -- : Checking at_exit_jobs
+D, [2026-09-10T21:37:05.212555 #875] DEBUG -- : Found job on at_exit_jobs
+D, [2026-09-10T21:37:05.212807 #875] DEBUG -- : resque-3.0.3: Processing at_exit_jobs since 1789076225 [AtExitJob]
+I, [2026-09-10T21:37:05.212841 #875]  INFO -- : got: (Job{at_exit_jobs} | AtExitJob | ["/tmp/resque_at_exit_test_file"])
+D, [2026-09-10T21:37:05.213647 #875] DEBUG -- : resque-3.0.3: Forked 887 at 1789076225
+D, [2026-09-10T21:37:05.217073 #875] DEBUG -- : Checking at_exit_jobs
+D, [2026-09-10T21:37:04.035661 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.040408 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.040438 #641] DEBUG -- : Found job on jobs
+I, [2026-09-10T21:37:04.041068 #641]  INFO -- : done: (Job{jobs} | SomeJob | [20, "/tmp"])
+D, [2026-09-10T21:37:04.041125 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.041151 #641] DEBUG -- : Found job on jobs
+E, [2026-09-10T21:37:04.041667 #641] ERROR -- : (Job{jobs} | BadJob | []) failed: #<RuntimeError: Bad job!>
+D, [2026-09-10T21:37:04.041779 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.041801 #641] DEBUG -- : Found job on jobs
+E, [2026-09-10T21:37:04.042730 #641] ERROR -- : (Job{jobs} | BadJob | []) failed: #<RuntimeError: Bad job!>
+I, [2026-09-10T21:37:05.244123 #641]  INFO -- : Pruning dead worker: workerA:1:jobs
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** done: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** done: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** done: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{critical} | GoodJob | [])
+*** got: (Job{high} | GoodJob | [])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | BadJob | [])
+*** got: (Job{not_failing_job} | RaiseExceptionOnFailure | [])
+*** done: (Job{not_failing_job} | RaiseExceptionOnFailure | [])
+D, [2026-09-10T21:37:04.035661 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.040408 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.040438 #641] DEBUG -- : Found job on jobs
+I, [2026-09-10T21:37:04.041068 #641]  INFO -- : done: (Job{jobs} | SomeJob | [20, "/tmp"])
+D, [2026-09-10T21:37:04.041125 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.041151 #641] DEBUG -- : Found job on jobs
+E, [2026-09-10T21:37:04.041667 #641] ERROR -- : (Job{jobs} | BadJob | []) failed: #<RuntimeError: Bad job!>
+D, [2026-09-10T21:37:04.041779 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.041801 #641] DEBUG -- : Found job on jobs
+E, [2026-09-10T21:37:04.042730 #641] ERROR -- : (Job{jobs} | BadJob | []) failed: #<RuntimeError: Bad job!>
+I, [2026-09-10T21:37:05.244123 #641]  INFO -- : Pruning dead worker: workerA:1:jobs
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** done: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** done: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** done: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{critical} | GoodJob | [])
+*** got: (Job{high} | GoodJob | [])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | BadJob | [])
+*** got: (Job{not_failing_job} | RaiseExceptionOnFailure | [])
+D, [2026-09-10T21:37:04.035661 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.040408 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.040438 #641] DEBUG -- : Found job on jobs
+I, [2026-09-10T21:37:04.041068 #641]  INFO -- : done: (Job{jobs} | SomeJob | [20, "/tmp"])
+D, [2026-09-10T21:37:04.041125 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.041151 #641] DEBUG -- : Found job on jobs
+E, [2026-09-10T21:37:04.041667 #641] ERROR -- : (Job{jobs} | BadJob | []) failed: #<RuntimeError: Bad job!>
+D, [2026-09-10T21:37:04.041779 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.041801 #641] DEBUG -- : Found job on jobs
+E, [2026-09-10T21:37:04.042730 #641] ERROR -- : (Job{jobs} | BadJob | []) failed: #<RuntimeError: Bad job!>
+I, [2026-09-10T21:37:05.244123 #641]  INFO -- : Pruning dead worker: workerA:1:jobs
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** done: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** done: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** done: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{critical} | GoodJob | [])
+*** got: (Job{high} | GoodJob | [])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | BadJob | [])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** done: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** (Job{jobs} | NotAValidJobClass | "") failed: #<NameError: uninitialized constant NotAValidJobClass>
+D, [2026-09-10T21:37:04.035661 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.040408 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.040438 #641] DEBUG -- : Found job on jobs
+I, [2026-09-10T21:37:04.041068 #641]  INFO -- : done: (Job{jobs} | SomeJob | [20, "/tmp"])
+D, [2026-09-10T21:37:04.041125 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.041151 #641] DEBUG -- : Found job on jobs
+E, [2026-09-10T21:37:04.041667 #641] ERROR -- : (Job{jobs} | BadJob | []) failed: #<RuntimeError: Bad job!>
+D, [2026-09-10T21:37:04.041779 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.041801 #641] DEBUG -- : Found job on jobs
+E, [2026-09-10T21:37:04.042730 #641] ERROR -- : (Job{jobs} | BadJob | []) failed: #<RuntimeError: Bad job!>
+I, [2026-09-10T21:37:05.244123 #641]  INFO -- : Pruning dead worker: workerA:1:jobs
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** done: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** done: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** done: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{critical} | GoodJob | [])
+*** got: (Job{high} | GoodJob | [])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | BadJob | [])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** done: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** (Job{jobs} | NotAValidJobClass | "") failed: #<NameError: uninitialized constant NotAValidJobClass>
+D, [2026-09-10T21:37:04.035661 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.040408 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.040438 #641] DEBUG -- : Found job on jobs
+I, [2026-09-10T21:37:04.041068 #641]  INFO -- : done: (Job{jobs} | SomeJob | [20, "/tmp"])
+D, [2026-09-10T21:37:04.041125 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.041151 #641] DEBUG -- : Found job on jobs
+E, [2026-09-10T21:37:04.041667 #641] ERROR -- : (Job{jobs} | BadJob | []) failed: #<RuntimeError: Bad job!>
+D, [2026-09-10T21:37:04.041779 #641] DEBUG -- : Checking jobs
+D, [2026-09-10T21:37:04.041801 #641] DEBUG -- : Found job on jobs
+E, [2026-09-10T21:37:04.042730 #641] ERROR -- : (Job{jobs} | BadJob | []) failed: #<RuntimeError: Bad job!>
+I, [2026-09-10T21:37:05.244123 #641]  INFO -- : Pruning dead worker: workerA:1:jobs
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** done: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** done: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** done: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{critical} | GoodJob | [])
+*** got: (Job{high} | GoodJob | [])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** got: (Job{jobs} | BadJob | [])
+*** got: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** done: (Job{jobs} | SomeJob | [20, "/tmp"])
+*** (Job{jobs} | NotAValidJobClass | "") failed: #<NameError: uninitialized constant NotAValidJobClass>
